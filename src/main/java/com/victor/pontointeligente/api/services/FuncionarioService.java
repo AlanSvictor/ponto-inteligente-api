@@ -16,7 +16,6 @@ public interface FuncionarioService {
 	
 	/**
 	 * Busca e retorna um funcionário dado um CPF.
-	 * 
 	 * @param cpf
 	 * @return Optional<Funcionario>
 	 */
