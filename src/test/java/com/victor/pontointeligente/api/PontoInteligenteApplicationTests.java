@@ -9,10 +9,11 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-@ActiveProfiles("test") //Ativa o profile 'test' criado em /PontoInteligente/src/main/resources/application-test.properties
-class PontoInteligenteApplicationTests {
+@ActiveProfiles("test")
+public class PontoInteligenteApplicationTests {
 
 	@Test
-	void contextLoads() {
+	public void contextLoads() {
 	}
+
 }

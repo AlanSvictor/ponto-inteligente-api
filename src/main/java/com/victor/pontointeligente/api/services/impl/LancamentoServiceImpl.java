@@ -28,10 +28,18 @@ public class LancamentoServiceImpl implements LancamentoService {
 		return this.lancamentoRepository.findByFuncionarioId(funcionarioId, pageRequest);
 	}
 	
+	
+//	@Cacheable("lancamentoPorId")
+//	public Optional<Lancamento> buscarPorId(Long id) {
+//		log.info("Buscando um lançamento pelo ID {}", id);
+//		return Optional.ofNullable(this.lancamentoRepository.findOne(id));
+//	}
+	
 	@Cacheable("lancamentoPorId")
 	public Optional<Lancamento> buscarPorId(Long id) {
-		log.info("Buscando um lançamento pelo ID {}", id);
-		return Optional.ofNullable(this.lancamentoRepository.findOne(id));
+		log.info("Buscando um lançamento pelo ID {}", id);	
+		Optional<Lancamento> lanc = this.lancamentoRepository.findById(id);
+		return lanc;
 	}
 	
 	@CachePut("lancamentoPorId")
@@ -42,7 +50,7 @@ public class LancamentoServiceImpl implements LancamentoService {
 	
 	public void remover(Long id) {
 		log.info("Removendo o lançamento ID {}", id);
-		this.lancamentoRepository.delete(id);
+		this.lancamentoRepository.deleteById(id);
 	}
 
 }
