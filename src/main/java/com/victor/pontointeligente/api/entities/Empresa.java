@@ -20,6 +20,7 @@ import javax.persistence.Table;
 @Table(name = "empresa")
 public class Empresa implements Serializable {
 
+	//https://blog.caelum.com.br/entendendo-o-serialversionuid/
 	private static final long serialVersionUID = 3960436649365666213L;
 	
 	private Long id;

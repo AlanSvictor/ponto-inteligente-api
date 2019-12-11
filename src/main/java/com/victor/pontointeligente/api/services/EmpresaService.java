@@ -13,6 +13,7 @@ public interface EmpresaService {
 	 */
 	Optional<Empresa> buscarPorCnpj(String cnpj);
 	
+	
 	/**
 	 * Cadastra uma nova empresa na base de dados.
 	 * 
@@ -20,5 +21,15 @@ public interface EmpresaService {
 	 * @return Empresa
 	 */
 	Empresa persistir(Empresa empresa);
+	
+
+	/**
+	 * Retorna uma empresa dado uma razão social
+	 * 
+	 * @param razaoSocial
+	 * @return Optional<Empresa>
+	 */
+	Optional<Empresa> buscaPorRazaoSocial(String razaoSocial);
+	
 	
 }

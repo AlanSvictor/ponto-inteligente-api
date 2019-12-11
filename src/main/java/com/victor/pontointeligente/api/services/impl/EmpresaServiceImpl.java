@@ -30,4 +30,10 @@ public class EmpresaServiceImpl implements EmpresaService {
 		return this.empresaRepository.save(empresa);
 	}
 
+	@Override
+	public Optional<Empresa> buscaPorRazaoSocial(String razaoSocial) {
+		log.info("Buscando uma empresa para a Razão social {}", razaoSocial);
+		return Optional.ofNullable(empresaRepository.findByRazaoSocial(razaoSocial));
+	}
+
 }
