@@ -31,11 +31,13 @@ public class EmpresaServiceTest {
 	private EmpresaService empresaService;
 
 	private static final String CNPJ = "51463645000100";
+	private static final String razaoSocial = "Empresa de teste";
 
 	@Before
 	public void setUp() throws Exception {
 		BDDMockito.given(this.empresaRepository.findByCnpj(Mockito.anyString())).willReturn(new Empresa());
 		BDDMockito.given(this.empresaRepository.save(Mockito.any(Empresa.class))).willReturn(new Empresa());
+		BDDMockito.given(this.empresaRepository.findByRazaoSocial(Mockito.anyString())).willReturn(new Empresa());
 	}
 
 	@Test
@@ -50,4 +52,11 @@ public class EmpresaServiceTest {
 
 		assertNotNull(empresa);
 	}
+
+	@Test
+	public void testBuscarEmpresaRazaoSocial() {
+		Optional<Empresa> empresa = this.empresaService.buscaPorRazaoSocial(razaoSocial);
+		assertTrue(empresa.isPresent());
+	}
+	
 }
