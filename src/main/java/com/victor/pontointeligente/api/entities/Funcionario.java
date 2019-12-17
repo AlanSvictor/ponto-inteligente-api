@@ -89,7 +89,7 @@ public class Funcionario implements Serializable {
 		return valorHora;
 	}
 
-	// Essa anotação diz para o JPA ignorar o relacionamento com o banco
+	// Essa anotação diz para o JPA ignorar o relacionamento com o banco .
 	@Transient
 	public Optional<BigDecimal> getValorHoraOpt() {
 		return Optional.ofNullable(valorHora);
