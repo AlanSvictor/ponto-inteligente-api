@@ -1,7 +1,8 @@
 package com.victor.pontointeligente.api.services;
 
-import static org.junit.Assert.assertTrue;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+
+
+import static org.junit.Assert.assertNotNull;
 
 import java.util.ArrayList;
 import java.util.Optional;
@@ -54,7 +55,7 @@ public class LancamentoServiceTest {
 	public void testBuscarLancamentoPorId() {
 		Optional<Lancamento> lancamento = this.lancamentoService.buscarPorId(1L);
 
-		assertTrue(lancamento.isEmpty());
+		assertNotNull(lancamento.isPresent());
 	}
 
 	@Test
