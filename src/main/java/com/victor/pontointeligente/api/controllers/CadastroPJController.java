@@ -26,9 +26,9 @@ import com.victor.pontointeligente.api.services.EmpresaService;
 import com.victor.pontointeligente.api.services.FuncionarioService;
 import com.victor.pontointeligente.api.utils.PasswordUtils;
 
-@RestController
+@RestController // diz que é um endpoint
 @RequestMapping("/api/cadastrar-pj")
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "*") //O ideal é limitar uma url
 public class CadastroPJController {
 
 	private static final Logger log = LoggerFactory.getLogger(CadastroPJController.class);
