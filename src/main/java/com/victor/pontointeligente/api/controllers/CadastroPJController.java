@@ -127,7 +127,6 @@ public class CadastroPJController {
 
 	/**
 	 * Popula o DTO de cadastro com os dados do funcionário e empresa.
-	 * 
 	 * @param funcionario
 	 * @return CadastroPJDto
 	 */
