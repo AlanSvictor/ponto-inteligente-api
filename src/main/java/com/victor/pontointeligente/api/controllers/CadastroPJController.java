@@ -50,6 +50,11 @@ public class CadastroPJController {
 	 * @return ResponseEntity<Response<CadastroPJDto>>
 	 * @throws NoSuchAlgorithmException
 	 */
+	/*
+	 * @RequestBody, pega o corpo da requisição e converte em um cadastro Dto
+	 * @Valid - faz a validação das anotações DTO
+	*/
+	
 	@PostMapping
 	public ResponseEntity<Response<CadastroPJDto>> cadastrar(@Valid @RequestBody CadastroPJDto cadastroPJDto,
 			BindingResult result) throws NoSuchAlgorithmException {
