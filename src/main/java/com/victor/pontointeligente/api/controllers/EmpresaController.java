@@ -26,10 +26,7 @@ public class EmpresaController {
 
 	@Autowired
 	private EmpresaService empresaService;
-
-	public EmpresaController() {
-	}
-
+	
 	/**
 	 * Retorna uma empresa dado um CNPJ.
 	 * 
@@ -63,6 +60,7 @@ public class EmpresaController {
 		empresaDto.setId(empresa.getId());
 		empresaDto.setCnpj(empresa.getCnpj());
 		empresaDto.setRazaoSocial(empresa.getRazaoSocial());
+		
 
 		return empresaDto;
 	}

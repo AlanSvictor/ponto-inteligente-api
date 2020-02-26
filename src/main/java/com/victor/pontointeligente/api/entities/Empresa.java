@@ -29,6 +29,7 @@ public class Empresa implements Serializable {
 	private Date dataCriacao;
 	private Date dataAtualizacao;
 	private List<Funcionario> funcionarios;
+	//private String emailEmp;//
 	
 	public Empresa() {
 	}
@@ -84,7 +85,18 @@ public class Empresa implements Serializable {
 	public List<Funcionario> getFuncionarios() {
 		return funcionarios;
 	}
-
+	
+	/*
+	@Column(name = "email_emp", nullable = false)
+	public String getEmailEmp() {
+		return emailEmp;
+	}
+	
+	public void setEmailEmp(String emailEmpresa) {
+		this.emailEmp = emailEmpresa;
+	}
+	*/
+	
 	public void setFuncionarios(List<Funcionario> funcionarios) {
 		this.funcionarios = funcionarios;
 	}
