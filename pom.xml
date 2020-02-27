@@ -68,10 +68,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
-		
+
+		<!-- Foi adicionado para acrescentar a anotação: @WithMockUser nos testes -->		
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-test</artifactId>
+			<scope>test</scope>
 		</dependency>		
 		
 		<!--  Hibernate validator -->
@@ -93,8 +95,14 @@
 			<!--
 			<version>3.6</version>
 			-->
-		</dependency>						
+		</dependency>
 		
+		<!-- JWT token -->
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt</artifactId>
+			<version>0.7.0</version>
+		</dependency>
 	</dependencies>
 
 	<build>
